@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./imgs/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Encriptador</title>
+  </head>
+  <body>
+    <header class="header">
+      <img
+        class="element"
+        src="./imgs/logo.png"
+        alt="Encriptador-logo"
+        width="80px"
+      />
+      <div class="element">
+        <input type="checkbox" class="switch" onchange="dark()" />
+      </div>
+    </header>
+    <!-- --------------------------- -->
+    <main class="main flex-c">
+        <form class="section " onsubmit="accion(event)">
+            <textarea required
+                name="input"
+                id="input"               
+                placeholder="Ingrese el texto a encriptar o desencriptar y presione el repectivo boton."
+            ></textarea>
+            <span class="info">	&#9755; Ingrese letras sin acentos. </span>
+            <div class="btns">
+                <button type="submit" name="encriptar">Encriptar</button>
+                <button type="submit" name="desencriptar">Desencriptar </button>
+            </div>
+        </form>
+
+        <section class="section">
+            <div class="box-result">
+                <img class="null" src="./imgs/null.png" alt="null" width="100%">
+                Ningún mensaje fue encontrado.
+            </div>
+            <button class="btn-copy" disabled onclick="copiarAlPortapapeles()" >Copiar</button>
+        </section>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
